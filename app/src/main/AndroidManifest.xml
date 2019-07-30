@@ -18,7 +18,6 @@
         android:roundIcon="@drawable/zinqlogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ExperimentalImageCapture"></activity>
         <activity android:name=".ResultsActivity" />
         <activity android:name=".ImageCapture" />
         <activity android:name=".MainActivity">

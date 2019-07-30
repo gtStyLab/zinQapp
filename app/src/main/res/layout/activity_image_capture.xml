@@ -45,10 +45,11 @@
 
         <ImageView
             android:id="@+id/mImageView"
-            android:layout_width="match_parent"
-            android:layout_height="625dp"
+            android:layout_width="wrap_content"
+            android:layout_height="610dp"
             android:layout_above="@id/buttonLayout"
-            android:layout_marginBottom="6dp"
+            android:layout_marginBottom="29dp"
+            android:scaleType="fitXY"
             android:src="@drawable/controls" />
 
     </RelativeLayout>
