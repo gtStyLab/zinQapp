@@ -36,6 +36,10 @@ import android.support.v7.app.AlertDialog;
 import android.os.Build;
 import android.content.DialogInterface;
 import android.view.MotionEvent;
+import java.io.ByteArrayOutputStream;
+import java.io.FileOutputStream;
+import android.content.Context;
+
 
 
 public class ImageCapture extends AppCompatActivity {
@@ -44,6 +48,9 @@ public class ImageCapture extends AppCompatActivity {
     private static final int REQUEST_IMAGE_ALBUM = 2;
     private static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 1;
     private static final String TAG = "ImageCapture";
+
+
+    /*
 
     @Override
     public boolean onTouchEvent(MotionEvent event)
@@ -55,28 +62,36 @@ public class ImageCapture extends AppCompatActivity {
         BitmapDrawable bitmapDrawable = (BitmapDrawable) image.getDrawable();
         Rect imageBounds = bitmapDrawable.getBounds();
 
-        /*
+        double Xratio = bitmapDrawable.getIntrinsicWidth()/image.getWidth();
+        double Yratio = bitmapDrawable.getIntrinsicHeight()/image.getHeight();
+
+        //float scaledcoords[] = getPointerCoords(image, event);
+
+
         int intrinsicHeight = bitmapDrawable.getIntrinsicHeight();
         int intrinsicWidth = bitmapDrawable.getIntrinsicWidth();
 
         int scaledHeight = imageBounds.height();
         int scaledWidth = imageBounds.width();
 
-        float heightRatio = intrinsicHeight / scaledHeight;
-        float widthRatio = intrinsicWidth / scaledWidth;
+        double heightRatio = intrinsicHeight / scaledHeight;
+        double widthRatio = intrinsicWidth / scaledWidth;
 
         int scaledImageOffsetX = (int) (event.getX() - imageBounds.left);
         int scaledImageOffsetY = (int) (event.getY() - imageBounds.top);
 
         int originalImageOffsetX = (int) (scaledImageOffsetX * widthRatio);
         int originalImageOffsetY = (int) (scaledImageOffsetY * heightRatio);
-        */
+
 
         int[] viewCoords = new int[2];
         image.getLocationOnScreen(viewCoords);
 
         int imageX = x - viewCoords[0];
         int imageY = y - viewCoords[1];
+
+        int updatedx = (int) ((int) imageX*Xratio);
+        int updatedy = (int) ((int) imageY*Yratio);
 
         int imageviewHeight = image.getHeight();
         int imageviewWidth = image.getWidth();
@@ -89,6 +104,19 @@ public class ImageCapture extends AppCompatActivity {
         }
         return false;
     }
+
+    final float[] getPointerCoords(ImageView view, MotionEvent e)
+    {
+        final int index = e.getActionIndex();
+        final float[] coords = new float[] { e.getX(index), e.getY(index) };
+        Matrix matrix = new Matrix();
+        view.getImageMatrix().invert(matrix);
+        matrix.postTranslate(view.getScrollX(), view.getScrollY());
+        matrix.mapPoints(coords);
+        return coords;
+    }
+
+    */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -165,6 +193,34 @@ public class ImageCapture extends AppCompatActivity {
             return null;
         }
     }
+
+    public void processMoveToResults(View view) {
+        ImageView image = findViewById(R.id.mImageView);
+        Bitmap bitmap = ((BitmapDrawable) image.getDrawable()).getBitmap();
+
+        createImageFromBitmap(bitmap);
+        Intent goToNextActivity = new Intent(getApplicationContext(), chooseCircle.class);
+        startActivity(goToNextActivity);
+        finish();
+    }
+
+    public String createImageFromBitmap(Bitmap bitmap) {
+        String fileName = "myImage";//no .png or .jpg needed
+        try {
+            ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+            FileOutputStream fo = openFileOutput(fileName, Context.MODE_PRIVATE);
+            fo.write(bytes.toByteArray());
+            // remember close file output
+            fo.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            fileName = null;
+        }
+        return fileName;
+    }
+
+    /*
 
     public void processMoveToResults(View view) {
 
@@ -293,7 +349,7 @@ public class ImageCapture extends AppCompatActivity {
 
                 }
 
-                /*
+
                 if (numberOfCircles == 4) {
                     for (int i = 0; i < numberOfCircles; i++) {
                         double[] circleCoordinates = circles.get(0, i);
@@ -325,7 +381,7 @@ public class ImageCapture extends AppCompatActivity {
                     }
 
                 }
-                */
+
 
                 param2 += 3;
             }
@@ -333,7 +389,7 @@ public class ImageCapture extends AppCompatActivity {
             param2 = 3;
         }
 
-        /*
+
         for (int n : reds) {
             redsum += n;
         }
@@ -349,7 +405,7 @@ public class ImageCapture extends AppCompatActivity {
         greenaverage = greensum / greens.size();
         blueaverage = bluesum / blues.size();
 
-        */
+
 
         if (numberOfCircles == 1) {
 
@@ -393,6 +449,8 @@ public class ImageCapture extends AppCompatActivity {
         }
 
     }
+
+    */
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
