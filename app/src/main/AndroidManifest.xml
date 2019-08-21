@@ -18,7 +18,14 @@
         android:roundIcon="@drawable/zinqlogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".chooseCircle"></activity>
+        <activity android:name=".CreditsActivity"></activity>
+        <activity android:name=".InstructionsActivity" />
+        <activity android:name=".chooseCircle6" />
+        <activity android:name=".chooseCircle5" />
+        <activity android:name=".chooseCircle4" />
+        <activity android:name=".chooseCircle3" />
+        <activity android:name=".chooseCircle2" />
+        <activity android:name=".chooseCircle" />
         <activity android:name=".ResultsActivity" />
         <activity android:name=".ImageCapture" />
         <activity android:name=".MainActivity">

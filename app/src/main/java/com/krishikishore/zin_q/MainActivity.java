@@ -18,4 +18,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void moveToInstructions(View view) {
+        Intent intent = new Intent(MainActivity.this, InstructionsActivity.class);
+        startActivity(intent);
+    }
+
+    public void moveToCredits(View view) {
+        Intent intent = new Intent(MainActivity.this, CreditsActivity.class);
+        startActivity(intent);
+    }
+
 }
