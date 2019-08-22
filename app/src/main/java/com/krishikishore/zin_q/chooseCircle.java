@@ -15,7 +15,6 @@ import java.io.*;
 import org.opencv.android.*;
 import org.opencv.core.*;
 import org.opencv.imgproc.*;
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import android.graphics.Color;

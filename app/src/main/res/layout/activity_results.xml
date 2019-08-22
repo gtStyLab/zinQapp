@@ -191,6 +191,806 @@
             android:layout_centerInParent="true"
             android:textSize="9pt" />
 
+
+
+
+
+
+        <TextView
+            android:id="@+id/spacer2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/level"
+            android:text=""
+            android:textSize="10pt" />
+
+        <View
+            android:id="@+id/finalcolor2"
+            android:layout_width="100px"
+            android:layout_height="200px"
+            android:layout_below="@+id/spacer2"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rectangle"/>
+
+        <TextView
+            android:id="@+id/spacer3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/finalcolor2"
+            android:text=""
+            android:textSize="5pt" />
+
+        <TextView
+            android:id="@+id/colorScore2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer3"
+            android:text="5.0"
+            android:layout_centerInParent="true"
+            android:textSize="20pt" />
+
+        <TextView
+            android:id="@+id/spacer4"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/colorScore2"
+            android:text=""
+            android:textSize="2pt" />
+
+        <TextView
+            android:id="@+id/constantDescriptor2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer4"
+            android:text="Color Score"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer5"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/constantDescriptor2"
+            android:text=""
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/coordinates2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer5"
+            android:text="(X, Y):"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer6"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/coordinates2"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/radius2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer6"
+            android:text="Radius:"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer7"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/radius2"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/redvalue2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer7"
+            android:text="Red:"
+            android:textColor="#ff0000"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer8"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/redvalue2"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/greenvalue2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer8"
+            android:text="Green:"
+            android:textColor="#008000"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer9"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/greenvalue2"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/bluevalue2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer9"
+            android:text="Blue:"
+            android:textColor="#0000ff"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer10"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/bluevalue2"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/level2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer10"
+            android:text="Level:"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/spacer11"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/level2"
+            android:text=""
+            android:textSize="10pt" />
+
+        <View
+            android:id="@+id/finalcolor3"
+            android:layout_width="100px"
+            android:layout_height="200px"
+            android:layout_below="@+id/spacer11"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rectangle"/>
+
+        <TextView
+            android:id="@+id/spacer12"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/finalcolor3"
+            android:text=""
+            android:textSize="5pt" />
+
+        <TextView
+            android:id="@+id/colorScore3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer12"
+            android:text="5.0"
+            android:layout_centerInParent="true"
+            android:textSize="20pt" />
+
+        <TextView
+            android:id="@+id/spacer13"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/colorScore3"
+            android:text=""
+            android:textSize="2pt" />
+
+        <TextView
+            android:id="@+id/constantDescriptor3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer13"
+            android:text="Color Score"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer14"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/constantDescriptor3"
+            android:text=""
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/coordinates3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer14"
+            android:text="(X, Y):"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer15"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/coordinates3"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/radius3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer15"
+            android:text="Radius:"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer16"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/radius3"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/redvalue3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer16"
+            android:text="Red:"
+            android:textColor="#ff0000"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer17"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/redvalue3"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/greenvalue3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer17"
+            android:text="Green:"
+            android:textColor="#008000"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer18"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/greenvalue3"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/bluevalue3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer18"
+            android:text="Blue:"
+            android:textColor="#0000ff"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer19"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/bluevalue3"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/level3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer19"
+            android:text="Level:"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+
+
+
+
+        <TextView
+            android:id="@+id/spacer20"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/level3"
+            android:text=""
+            android:textSize="10pt" />
+
+        <View
+            android:id="@+id/finalcolor4"
+            android:layout_width="100px"
+            android:layout_height="200px"
+            android:layout_below="@+id/spacer20"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rectangle"/>
+
+        <TextView
+            android:id="@+id/spacer21"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/finalcolor4"
+            android:text=""
+            android:textSize="5pt" />
+
+        <TextView
+            android:id="@+id/colorScore4"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer21"
+            android:text="5.0"
+            android:layout_centerInParent="true"
+            android:textSize="20pt" />
+
+        <TextView
+            android:id="@+id/spacer22"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/colorScore4"
+            android:text=""
+            android:textSize="2pt" />
+
+        <TextView
+            android:id="@+id/constantDescriptor4"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer22"
+            android:text="Color Score"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer23"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/constantDescriptor4"
+            android:text=""
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/coordinates4"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer23"
+            android:text="(X, Y):"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer24"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/coordinates4"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/radius4"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer24"
+            android:text="Radius:"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer25"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/radius4"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/redvalue4"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer25"
+            android:text="Red:"
+            android:textColor="#ff0000"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer26"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/redvalue4"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/greenvalue4"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer26"
+            android:text="Green:"
+            android:textColor="#008000"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer27"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/greenvalue4"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/bluevalue4"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer27"
+            android:text="Blue:"
+            android:textColor="#0000ff"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer28"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/bluevalue4"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/level4"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer28"
+            android:text="Level:"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+
+
+        <TextView
+            android:id="@+id/spacer29"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/level4"
+            android:text=""
+            android:textSize="10pt" />
+
+        <View
+            android:id="@+id/finalcolor5"
+            android:layout_width="100px"
+            android:layout_height="200px"
+            android:layout_below="@+id/spacer29"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rectangle"/>
+
+        <TextView
+            android:id="@+id/spacer30"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/finalcolor5"
+            android:text=""
+            android:textSize="5pt" />
+
+        <TextView
+            android:id="@+id/colorScore5"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer30"
+            android:text="5.0"
+            android:layout_centerInParent="true"
+            android:textSize="20pt" />
+
+        <TextView
+            android:id="@+id/spacer31"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/colorScore5"
+            android:text=""
+            android:textSize="2pt" />
+
+        <TextView
+            android:id="@+id/constantDescriptor5"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer31"
+            android:text="Color Score"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer32"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/constantDescriptor5"
+            android:text=""
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/coordinates5"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer32"
+            android:text="(X, Y):"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer33"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/coordinates5"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/radius5"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer33"
+            android:text="Radius:"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer34"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/radius5"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/redvalue5"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer34"
+            android:text="Red:"
+            android:textColor="#ff0000"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer35"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/redvalue5"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/greenvalue5"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer35"
+            android:text="Green:"
+            android:textColor="#008000"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer36"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/greenvalue5"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/bluevalue5"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer36"
+            android:text="Blue:"
+            android:textColor="#0000ff"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer37"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/bluevalue5"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/level5"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer37"
+            android:text="Level:"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+
+
+
+        <TextView
+            android:id="@+id/spacer38"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/level5"
+            android:text=""
+            android:textSize="10pt" />
+
+        <View
+            android:id="@+id/finalcolor6"
+            android:layout_width="100px"
+            android:layout_height="200px"
+            android:layout_below="@+id/spacer38"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rectangle"/>
+
+        <TextView
+            android:id="@+id/spacer39"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/finalcolor6"
+            android:text=""
+            android:textSize="5pt" />
+
+        <TextView
+            android:id="@+id/colorScore6"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer39"
+            android:text="5.0"
+            android:layout_centerInParent="true"
+            android:textSize="20pt" />
+
+        <TextView
+            android:id="@+id/spacer40"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/colorScore6"
+            android:text=""
+            android:textSize="2pt" />
+
+        <TextView
+            android:id="@+id/constantDescriptor6"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer40"
+            android:text="Color Score"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer41"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/constantDescriptor6"
+            android:text=""
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/coordinates6"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer41"
+            android:text="(X, Y):"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer42"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/coordinates6"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/radius6"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer42"
+            android:text="Radius:"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer43"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/radius6"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/redvalue6"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer43"
+            android:text="Red:"
+            android:textColor="#ff0000"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer44"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/redvalue6"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/greenvalue6"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer44"
+            android:text="Green:"
+            android:textColor="#008000"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer45"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/greenvalue6"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/bluevalue6"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer45"
+            android:text="Blue:"
+            android:textColor="#0000ff"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/spacer46"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/bluevalue6"
+            android:text=""
+            android:textSize="7pt" />
+
+        <TextView
+            android:id="@+id/level6"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/spacer46"
+            android:text="Level:"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+
+
+
+
+
     </RelativeLayout>
 
     </ScrollView>

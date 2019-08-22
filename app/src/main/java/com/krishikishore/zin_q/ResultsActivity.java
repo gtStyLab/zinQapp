@@ -141,45 +141,230 @@ public class ResultsActivity extends AppCompatActivity {
 
 
 
-        View colorRectangle = (View)findViewById(R.id.finalcolor);
-        Drawable background = colorRectangle.getBackground();
-        if (background instanceof ShapeDrawable) {
-            ((ShapeDrawable)background).getPaint().setColor(Color.rgb(Integer.parseInt(red6), Integer.parseInt(green6), Integer.parseInt(blue6)));
-        } else if (background instanceof GradientDrawable) {
-            ((GradientDrawable)background).setColor(Color.rgb(Integer.parseInt(red6), Integer.parseInt(green6), Integer.parseInt(blue6)));
-        } else if (background instanceof ColorDrawable) {
-            ((ColorDrawable)background).setColor(Color.rgb(Integer.parseInt(red6), Integer.parseInt(green6), Integer.parseInt(blue6)));
+        View colorRectangle6 = (View)findViewById(R.id.finalcolor6);
+        Drawable background6 = colorRectangle6.getBackground();
+        if (background6 instanceof ShapeDrawable) {
+            ((ShapeDrawable)background6).getPaint().setColor(Color.rgb(Integer.parseInt(red6), Integer.parseInt(green6), Integer.parseInt(blue6)));
+        } else if (background6 instanceof GradientDrawable) {
+            ((GradientDrawable)background6).setColor(Color.rgb(Integer.parseInt(red6), Integer.parseInt(green6), Integer.parseInt(blue6)));
+        } else if (background6 instanceof ColorDrawable) {
+            ((ColorDrawable)background6).setColor(Color.rgb(Integer.parseInt(red6), Integer.parseInt(green6), Integer.parseInt(blue6)));
         }
 
-        double doubleColorScore = experimentalcolorscore;
-        String colorScore = String.format("%.3f", doubleColorScore);
-        TextView colorScoreDisplay = (TextView) findViewById(R.id.colorScore);
-        colorScoreDisplay.setText(colorScore);
+        double doubleColorScore6 = experimentalcolorscore;
+        String colorScore6a = String.format("%.3f", doubleColorScore6);
+        TextView colorScoreDisplay6 = (TextView) findViewById(R.id.colorScore6);
+        colorScoreDisplay6.setText(colorScore6a);
 
-        TextView coordinatesDisplay = (TextView) findViewById(R.id.coordinates);
-        coordinatesDisplay.setText("(X, Y): (" + x6 +", " + y6 +")");
+        TextView coordinatesDisplay6 = (TextView) findViewById(R.id.coordinates6);
+        coordinatesDisplay6.setText("(X, Y): (" + x6 +", " + y6 +")");
 
-        TextView radiusDisplay = (TextView) findViewById(R.id.radius);
-        radiusDisplay.setText("Radius: " + radius6 + " pixels");
+        TextView radiusDisplay6 = (TextView) findViewById(R.id.radius6);
+        radiusDisplay6.setText("Radius: " + radius6 + " pixels");
 
-        TextView redDisplay = (TextView) findViewById(R.id.redvalue);
-        redDisplay.setText("Red: " + red6);
+        TextView redDisplay6 = (TextView) findViewById(R.id.redvalue6);
+        redDisplay6.setText("Red: " + red6);
 
-        TextView greenDisplay = (TextView) findViewById(R.id.greenvalue);
-        greenDisplay.setText("Green: " + green6);
+        TextView greenDisplay6 = (TextView) findViewById(R.id.greenvalue6);
+        greenDisplay6.setText("Green: " + green6);
 
-        TextView blueDisplay = (TextView) findViewById(R.id.bluevalue);
-        blueDisplay.setText("Blue: " + blue6);
+        TextView blueDisplay6 = (TextView) findViewById(R.id.bluevalue6);
+        blueDisplay6.setText("Blue: " + blue6);
 
-        TextView levelDisplay = (TextView) findViewById(R.id.level);
+        TextView levelDisplay6 = (TextView) findViewById(R.id.level6);
 
-        if (doubleColorScore < 1.5) {
-            levelDisplay.setText("Level: Low");
-        } else if (doubleColorScore < 3) {
-            levelDisplay.setText("Level: Borderline");
+        if (doubleColorScore6 < 1.5) {
+            levelDisplay6.setText("Level: Low");
+        } else if (doubleColorScore6 < 3) {
+            levelDisplay6.setText("Level: Borderline");
         } else {
-            levelDisplay.setText("Level: High");
+            levelDisplay6.setText("Level: High");
         }
+
+
+
+
+
+        View colorRectangle1 = (View)findViewById(R.id.finalcolor);
+        Drawable background1 = colorRectangle1.getBackground();
+        if (background1 instanceof ShapeDrawable) {
+            ((ShapeDrawable)background1).getPaint().setColor(Color.rgb(Integer.parseInt(red1), Integer.parseInt(green1), Integer.parseInt(blue1)));
+        } else if (background1 instanceof GradientDrawable) {
+            ((GradientDrawable)background1).setColor(Color.rgb(Integer.parseInt(red1), Integer.parseInt(green1), Integer.parseInt(blue1)));
+        } else if (background1 instanceof ColorDrawable) {
+            ((ColorDrawable)background1).setColor(Color.rgb(Integer.parseInt(red1), Integer.parseInt(green1), Integer.parseInt(blue1)));
+        }
+
+
+        TextView colorScoreDisplay1 = (TextView) findViewById(R.id.colorScore);
+        colorScoreDisplay1.setText(colorScore1);
+
+        TextView coordinatesDisplay1 = (TextView) findViewById(R.id.coordinates);
+        coordinatesDisplay1.setText("(X, Y): (" + x1 +", " + y1 +")");
+
+        TextView radiusDisplay1 = (TextView) findViewById(R.id.radius);
+        radiusDisplay1.setText("Radius: " + radius1 + " pixels");
+
+        TextView redDisplay1 = (TextView) findViewById(R.id.redvalue);
+        redDisplay1.setText("Red: " + red1);
+
+        TextView greenDisplay1 = (TextView) findViewById(R.id.greenvalue);
+        greenDisplay1.setText("Green: " + green1);
+
+        TextView blueDisplay1 = (TextView) findViewById(R.id.bluevalue);
+        blueDisplay1.setText("Blue: " + blue1);
+
+        TextView levelDisplay1 = (TextView) findViewById(R.id.level);
+        levelDisplay1.setText("Level: Borderline");
+
+
+
+
+
+
+
+        View colorRectangle2 = (View)findViewById(R.id.finalcolor2);
+        Drawable background2 = colorRectangle2.getBackground();
+        if (background2 instanceof ShapeDrawable) {
+            ((ShapeDrawable)background2).getPaint().setColor(Color.rgb(Integer.parseInt(red2), Integer.parseInt(green2), Integer.parseInt(blue2)));
+        } else if (background2 instanceof GradientDrawable) {
+            ((GradientDrawable)background2).setColor(Color.rgb(Integer.parseInt(red2), Integer.parseInt(green2), Integer.parseInt(blue2)));
+        } else if (background2 instanceof ColorDrawable) {
+            ((ColorDrawable)background2).setColor(Color.rgb(Integer.parseInt(red2), Integer.parseInt(green2), Integer.parseInt(blue2)));
+        }
+
+
+        TextView colorScoreDisplay2 = (TextView) findViewById(R.id.colorScore2);
+        colorScoreDisplay2.setText(colorScore2);
+
+        TextView coordinatesDisplay2 = (TextView) findViewById(R.id.coordinates2);
+        coordinatesDisplay2.setText("(X, Y): (" + x2 +", " + y2 +")");
+
+        TextView radiusDisplay2 = (TextView) findViewById(R.id.radius2);
+        radiusDisplay2.setText("Radius: " + radius2 + " pixels");
+
+        TextView redDisplay2 = (TextView) findViewById(R.id.redvalue2);
+        redDisplay2.setText("Red: " + red2);
+
+        TextView greenDisplay2 = (TextView) findViewById(R.id.greenvalue2);
+        greenDisplay2.setText("Green: " + green2);
+
+        TextView blueDisplay2 = (TextView) findViewById(R.id.bluevalue2);
+        blueDisplay2.setText("Blue: " + blue2);
+
+        TextView levelDisplay2 = (TextView) findViewById(R.id.level2);
+        levelDisplay2.setText("Level: Borderline");
+
+
+
+
+
+
+        View colorRectangle3 = (View)findViewById(R.id.finalcolor3);
+        Drawable background3 = colorRectangle3.getBackground();
+        if (background3 instanceof ShapeDrawable) {
+            ((ShapeDrawable)background3).getPaint().setColor(Color.rgb(Integer.parseInt(red3), Integer.parseInt(green3), Integer.parseInt(blue3)));
+        } else if (background3 instanceof GradientDrawable) {
+            ((GradientDrawable)background3).setColor(Color.rgb(Integer.parseInt(red3), Integer.parseInt(green3), Integer.parseInt(blue3)));
+        } else if (background3 instanceof ColorDrawable) {
+            ((ColorDrawable)background3).setColor(Color.rgb(Integer.parseInt(red3), Integer.parseInt(green3), Integer.parseInt(blue3)));
+        }
+
+
+        TextView colorScoreDisplay3 = (TextView) findViewById(R.id.colorScore3);
+        colorScoreDisplay3.setText(colorScore3);
+
+        TextView coordinatesDisplay3 = (TextView) findViewById(R.id.coordinates3);
+        coordinatesDisplay3.setText("(X, Y): (" + x3 +", " + y3 +")");
+
+        TextView radiusDisplay3 = (TextView) findViewById(R.id.radius3);
+        radiusDisplay3.setText("Radius: " + radius3 + " pixels");
+
+        TextView redDisplay3 = (TextView) findViewById(R.id.redvalue3);
+        redDisplay3.setText("Red: " + red3);
+
+        TextView greenDisplay3 = (TextView) findViewById(R.id.greenvalue3);
+        greenDisplay3.setText("Green: " + green3);
+
+        TextView blueDisplay3 = (TextView) findViewById(R.id.bluevalue3);
+        blueDisplay3.setText("Blue: " + blue3);
+
+        TextView levelDisplay3 = (TextView) findViewById(R.id.level3);
+        levelDisplay3.setText("Level: Borderline");
+
+
+
+
+
+        View colorRectangle4 = (View)findViewById(R.id.finalcolor4);
+        Drawable background4 = colorRectangle4.getBackground();
+        if (background4 instanceof ShapeDrawable) {
+            ((ShapeDrawable)background4).getPaint().setColor(Color.rgb(Integer.parseInt(red4), Integer.parseInt(green4), Integer.parseInt(blue4)));
+        } else if (background4 instanceof GradientDrawable) {
+            ((GradientDrawable)background4).setColor(Color.rgb(Integer.parseInt(red4), Integer.parseInt(green4), Integer.parseInt(blue4)));
+        } else if (background4 instanceof ColorDrawable) {
+            ((ColorDrawable)background4).setColor(Color.rgb(Integer.parseInt(red4), Integer.parseInt(green4), Integer.parseInt(blue4)));
+        }
+
+
+        TextView colorScoreDisplay4 = (TextView) findViewById(R.id.colorScore4);
+        colorScoreDisplay4.setText(colorScore4);
+
+        TextView coordinatesDisplay4 = (TextView) findViewById(R.id.coordinates4);
+        coordinatesDisplay4.setText("(X, Y): (" + x4 +", " + y4 +")");
+
+        TextView radiusDisplay4 = (TextView) findViewById(R.id.radius4);
+        radiusDisplay4.setText("Radius: " + radius4 + " pixels");
+
+        TextView redDisplay4 = (TextView) findViewById(R.id.redvalue4);
+        redDisplay4.setText("Red: " + red4);
+
+        TextView greenDisplay4 = (TextView) findViewById(R.id.greenvalue4);
+        greenDisplay4.setText("Green: " + green4);
+
+        TextView blueDisplay4 = (TextView) findViewById(R.id.bluevalue4);
+        blueDisplay4.setText("Blue: " + blue4);
+
+        TextView levelDisplay4 = (TextView) findViewById(R.id.level4);
+        levelDisplay4.setText("Level: Borderline");
+
+
+
+
+        View colorRectangle5 = (View)findViewById(R.id.finalcolor5);
+        Drawable background5 = colorRectangle5.getBackground();
+        if (background5 instanceof ShapeDrawable) {
+            ((ShapeDrawable)background5).getPaint().setColor(Color.rgb(Integer.parseInt(red5), Integer.parseInt(green5), Integer.parseInt(blue5)));
+        } else if (background5 instanceof GradientDrawable) {
+            ((GradientDrawable)background5).setColor(Color.rgb(Integer.parseInt(red5), Integer.parseInt(green5), Integer.parseInt(blue5)));
+        } else if (background5 instanceof ColorDrawable) {
+            ((ColorDrawable)background5).setColor(Color.rgb(Integer.parseInt(red5), Integer.parseInt(green5), Integer.parseInt(blue5)));
+        }
+
+
+        TextView colorScoreDisplay5 = (TextView) findViewById(R.id.colorScore5);
+        colorScoreDisplay5.setText(colorScore5);
+
+        TextView coordinatesDisplay5 = (TextView) findViewById(R.id.coordinates5);
+        coordinatesDisplay5.setText("(X, Y): (" + x5 +", " + y5 +")");
+
+        TextView radiusDisplay5 = (TextView) findViewById(R.id.radius5);
+        radiusDisplay5.setText("Radius: " + radius5 + " pixels");
+
+        TextView redDisplay5 = (TextView) findViewById(R.id.redvalue5);
+        redDisplay5.setText("Red: " + red5);
+
+        TextView greenDisplay5 = (TextView) findViewById(R.id.greenvalue5);
+        greenDisplay5.setText("Green: " + green5);
+
+        TextView blueDisplay5 = (TextView) findViewById(R.id.bluevalue5);
+        blueDisplay5.setText("Blue: " + blue5);
+
+        TextView levelDisplay5 = (TextView) findViewById(R.id.level5);
+        levelDisplay5.setText("Level: Borderline");
+
+
+
 
 
     }
