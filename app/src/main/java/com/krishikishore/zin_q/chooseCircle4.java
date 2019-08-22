@@ -202,31 +202,31 @@ public class chooseCircle4 extends AppCompatActivity {
                     }
                     Bitmap bitmap = ((BitmapDrawable) image.getDrawable()).getBitmap();
 
-                    if ((updatedx - 200 + 400) > bitmap.getWidth()) {
-                        updatedx = bitmap.getWidth() - 400;
+                    if ((updatedx - 100 + 200) > bitmap.getWidth()) {
+                        updatedx = bitmap.getWidth() - 200;
                     }
 
-                    if ((updatedy - 200 + 400) > bitmap.getHeight()) {
-                        updatedy = bitmap.getHeight() - 400;
+                    if ((updatedy - 100 + 200) > bitmap.getHeight()) {
+                        updatedy = bitmap.getHeight() - 200;
                     }
 
-                    if ((updatedx + 200) < 0) {
+                    if ((updatedx + 100) < 0) {
                         updatedx = 0;
                     }
 
-                    if ((updatedy + 200) < 0) {
+                    if ((updatedy + 100) < 0) {
                         updatedy = 0;
                     }
 
-                    if ((updatedx - 200) < 0) {
-                        updatedx = 200;
+                    if ((updatedx - 100) < 0) {
+                        updatedx = 100;
                     }
 
-                    if ((updatedy - 200) < 0) {
-                        updatedy = 200;
+                    if ((updatedy - 100) < 0) {
+                        updatedy = 100;
                     }
 
-                    Bitmap newbitmap = Bitmap.createBitmap(bitmap, updatedx - 200, updatedy - 200, 400, 400);
+                    Bitmap newbitmap = Bitmap.createBitmap(bitmap, updatedx - 100, updatedy - 100, 200, 200);
 
                     Mat mat = new Mat(newbitmap.getWidth(), newbitmap.getHeight(),
                             CvType.CV_8UC1);
