@@ -44,6 +44,606 @@
             android:text=""
             android:textSize="10pt" />
 
+        <LinearLayout
+            android:id="@+id/rowofcolors"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@+id/firstspace">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/color1"
+                    android:layout_width="100px"
+                    android:layout_height="200px"
+                    android:gravity="center"
+                    android:layout_margin = "10dp"
+                    android:background="@drawable/rectangle"/>
+
+                <TextView
+                    android:id="@+id/space1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/color1"
+                    android:text=" "
+                    android:textSize="2pt" />
+
+
+                <TextView
+                    android:id="@+id/red1"
+                    android:layout_height="100px"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/space1"
+                    android:layout_centerInParent="true"
+                    android:text="Red:"
+                    android:textColor="#ff0000"
+                    android:textSize="9pt" />
+
+
+                <TextView
+                    android:id="@+id/space2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/red1"
+                    android:text=""
+                    android:textSize="5pt" />
+
+                <TextView
+                    android:id="@+id/green1"
+                    android:layout_height="100px"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/space2"
+                    android:layout_centerInParent="true"
+                    android:text="Green:"
+                    android:textColor="#008000"
+                    android:textSize="9pt" />
+
+                <TextView
+                    android:id="@+id/space3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/green1"
+                    android:text=""
+                    android:textSize="5pt" />
+
+                <TextView
+                    android:id="@+id/blue1"
+                    android:layout_height="100px"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/space3"
+                    android:layout_centerInParent="true"
+                    android:text="Blue:"
+                    android:textColor="#0000ff"
+                    android:textSize="9pt" />
+
+                <TextView
+                    android:id="@+id/space4"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/blue1"
+                    android:text=""
+                    android:textSize="5pt" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/color2"
+                    android:layout_width="100px"
+                    android:layout_height="200px"
+                    android:gravity="center"
+                    android:layout_margin = "10dp"
+                    android:background="@drawable/rectangle"/>
+
+                <TextView
+                    android:id="@+id/space11"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/color2"
+                    android:text=" "
+                    android:textSize="2pt" />
+
+
+                <TextView
+                    android:id="@+id/red2"
+                    android:layout_height="100px"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/space11"
+                    android:layout_centerInParent="true"
+                    android:text="Red:"
+                    android:textColor="#ff0000"
+                    android:textSize="9pt" />
+
+
+                <TextView
+                    android:id="@+id/space12"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/red2"
+                    android:text=""
+                    android:textSize="5pt" />
+
+                <TextView
+                    android:id="@+id/green2"
+                    android:layout_height="100px"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/space12"
+                    android:layout_centerInParent="true"
+                    android:text="Green:"
+                    android:textColor="#008000"
+                    android:textSize="9pt" />
+
+                <TextView
+                    android:id="@+id/space13"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/green2"
+                    android:text=""
+                    android:textSize="5pt" />
+
+                <TextView
+                    android:id="@+id/blue2"
+                    android:layout_height="100px"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/space13"
+                    android:layout_centerInParent="true"
+                    android:text="Blue:"
+                    android:textColor="#0000ff"
+                    android:textSize="9pt" />
+
+                <TextView
+                    android:id="@+id/space14"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/blue2"
+                    android:text=""
+                    android:textSize="5pt" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/color3"
+                    android:layout_width="100px"
+                    android:layout_height="200px"
+                    android:gravity="center"
+                    android:layout_margin = "10dp"
+                    android:background="@drawable/rectangle"/>
+
+                <TextView
+                    android:id="@+id/space21"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/color3"
+                    android:text=" "
+                    android:textSize="2pt" />
+
+
+                <TextView
+                    android:id="@+id/red3"
+                    android:layout_height="100px"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/space21"
+                    android:layout_centerInParent="true"
+                    android:text="Red:"
+                    android:textColor="#ff0000"
+                    android:textSize="9pt" />
+
+
+                <TextView
+                    android:id="@+id/space22"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/red3"
+                    android:text=""
+                    android:textSize="5pt" />
+
+                <TextView
+                    android:id="@+id/green3"
+                    android:layout_height="100px"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/space22"
+                    android:layout_centerInParent="true"
+                    android:text="Green:"
+                    android:textColor="#008000"
+                    android:textSize="9pt" />
+
+                <TextView
+                    android:id="@+id/space23"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/green3"
+                    android:text=""
+                    android:textSize="5pt" />
+
+                <TextView
+                    android:id="@+id/blue3"
+                    android:layout_height="100px"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/space23"
+                    android:layout_centerInParent="true"
+                    android:text="Blue:"
+                    android:textColor="#0000ff"
+                    android:textSize="9pt" />
+
+                <TextView
+                    android:id="@+id/space24"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/blue3"
+                    android:text=""
+                    android:textSize="5pt" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/color4"
+                    android:layout_width="100px"
+                    android:layout_height="200px"
+                    android:gravity="center"
+                    android:layout_margin = "10dp"
+                    android:background="@drawable/rectangle"/>
+
+                <TextView
+                    android:id="@+id/space31"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/color4"
+                    android:text=" "
+                    android:textSize="2pt" />
+
+
+                <TextView
+                    android:id="@+id/red4"
+                    android:layout_height="100px"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/space31"
+                    android:layout_centerInParent="true"
+                    android:text="Red:"
+                    android:textColor="#ff0000"
+                    android:textSize="9pt" />
+
+
+                <TextView
+                    android:id="@+id/space32"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/red4"
+                    android:text=""
+                    android:textSize="5pt" />
+
+                <TextView
+                    android:id="@+id/green4"
+                    android:layout_height="100px"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/space32"
+                    android:layout_centerInParent="true"
+                    android:text="Green:"
+                    android:textColor="#008000"
+                    android:textSize="9pt" />
+
+                <TextView
+                    android:id="@+id/space33"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/green4"
+                    android:text=""
+                    android:textSize="5pt" />
+
+                <TextView
+                    android:id="@+id/blue4"
+                    android:layout_height="100px"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/space33"
+                    android:layout_centerInParent="true"
+                    android:text="Blue:"
+                    android:textColor="#0000ff"
+                    android:textSize="9pt" />
+
+                <TextView
+                    android:id="@+id/space34"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/blue4"
+                    android:text=""
+                    android:textSize="5pt" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/color5"
+                    android:layout_width="100px"
+                    android:layout_height="200px"
+                    android:gravity="center"
+                    android:layout_margin = "10dp"
+                    android:background="@drawable/rectangle"/>
+
+                <TextView
+                    android:id="@+id/space41"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/color5"
+                    android:text=" "
+                    android:textSize="2pt" />
+
+
+                <TextView
+                    android:id="@+id/red5"
+                    android:layout_height="100px"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/space41"
+                    android:layout_centerInParent="true"
+                    android:text="Red:"
+                    android:textColor="#ff0000"
+                    android:textSize="9pt" />
+
+
+                <TextView
+                    android:id="@+id/space42"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/red5"
+                    android:text=""
+                    android:textSize="5pt" />
+
+                <TextView
+                    android:id="@+id/green5"
+                    android:layout_height="100px"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/space42"
+                    android:layout_centerInParent="true"
+                    android:text="Green:"
+                    android:textColor="#008000"
+                    android:textSize="9pt" />
+
+                <TextView
+                    android:id="@+id/space43"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/green5"
+                    android:text=""
+                    android:textSize="5pt" />
+
+                <TextView
+                    android:id="@+id/blue5"
+                    android:layout_height="100px"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/space43"
+                    android:layout_centerInParent="true"
+                    android:text="Blue:"
+                    android:textColor="#0000ff"
+                    android:textSize="9pt" />
+
+                <TextView
+                    android:id="@+id/space44"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/blue5"
+                    android:text=""
+                    android:textSize="5pt" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/color6"
+                    android:layout_width="100px"
+                    android:layout_height="200px"
+                    android:gravity="center"
+                    android:layout_margin = "10dp"
+                    android:background="@drawable/rectangle"/>
+
+                <TextView
+                    android:id="@+id/space51"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/color6"
+                    android:text=" "
+                    android:textSize="2pt" />
+
+
+                <TextView
+                    android:id="@+id/red6"
+                    android:layout_height="100px"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/space51"
+                    android:layout_centerInParent="true"
+                    android:text="Red:"
+                    android:textColor="#ff0000"
+                    android:textSize="9pt" />
+
+
+                <TextView
+                    android:id="@+id/space52"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/red6"
+                    android:text=""
+                    android:textSize="5pt" />
+
+                <TextView
+                    android:id="@+id/green6"
+                    android:layout_height="100px"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/space52"
+                    android:layout_centerInParent="true"
+                    android:text="Green:"
+                    android:textColor="#008000"
+                    android:textSize="9pt" />
+
+                <TextView
+                    android:id="@+id/space53"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/green6"
+                    android:text=""
+                    android:textSize="5pt" />
+
+                <TextView
+                    android:id="@+id/blue6"
+                    android:layout_height="100px"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/space53"
+                    android:layout_centerInParent="true"
+                    android:text="Blue:"
+                    android:textColor="#0000ff"
+                    android:textSize="9pt" />
+
+                <TextView
+                    android:id="@+id/space54"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/blue6"
+                    android:text=""
+                    android:textSize="5pt" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/secondspace"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/rowofcolors"
+            android:text=""
+            android:textSize="2pt" />
+
+        <TextView
+            android:id="@+id/concentration"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/secondspace"
+            android:text="Concentration:"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/thirdspace"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/concentration"
+            android:text=""
+            android:textSize="6pt" />
+
+        <TextView
+            android:id="@+id/level"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/thirdspace"
+            android:text="Level:"
+            android:layout_centerInParent="true"
+            android:textSize="9pt" />
+
+        <TextView
+            android:id="@+id/fourthspace"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/level"
+            android:text=""
+            android:textSize="6pt" />
+
+        <Button
+            android:id="@+id/returnHome"
+            android:layout_width="272dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fourthspace"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:background="#204F6D"
+            android:text="ANOTHER TEST"
+            android:onClick="anotherTest"
+            android:textColor="#FFFFFF"
+            android:textSize="7pt" />
+
+        <!--
+        <LinearLayout
+            android:id="@+id/rowofreds"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@+id/secondspace">
+
+            <TextView
+                android:id="@+id/red1"
+                android:layout_height="100px"
+                android:layout_width="200px"
+                android:layout_below="@+id/fifthspace2"
+                android:gravity="center"
+                android:text="Red:"
+                android:textColor="#ff0000"
+                android:textSize="9pt" />
+            <TextView
+                android:id="@+id/red1"
+                android:layout_height="100px"
+                android:layout_width="200px"
+                android:layout_below="@+id/fifthspace2"
+                android:gravity="center"
+                android:text="Red:"
+                android:textColor="#ff0000"
+                android:textSize="9pt" />
+            <TextView
+                android:id="@+id/red1"
+                android:layout_height="100px"
+                android:layout_width="200px"
+                android:layout_below="@+id/fifthspace2"
+                android:gravity="center"
+                android:text="Red:"
+                android:textColor="#ff0000"
+                android:textSize="9pt" />
+            <TextView
+                android:id="@+id/red1"
+                android:layout_height="100px"
+                android:layout_width="200px"
+                android:layout_below="@+id/fifthspace2"
+                android:gravity="center"
+                android:text="Red:"
+                android:textColor="#ff0000"
+                android:textSize="9pt" />
+            <TextView
+                android:id="@+id/red1"
+                android:layout_height="100px"
+                android:layout_width="200px"
+                android:layout_below="@+id/fifthspace2"
+                android:gravity="center"
+                android:text="Red:"
+                android:textColor="#ff0000"
+                android:textSize="9pt" />
+            <TextView
+                android:id="@+id/red1"
+                android:layout_height="100px"
+                android:layout_width="200px"
+                android:layout_below="@+id/fifthspace2"
+                android:gravity="center"
+                android:text="Red:"
+                android:textColor="#ff0000"
+                android:textSize="9pt" />
+
+        </LinearLayout>
+
+        -->
+
+        <!--
         <View
             android:id="@+id/finalcolor"
             android:layout_width="100px"
@@ -989,7 +1589,7 @@
 
 
 
-
+-->
 
     </RelativeLayout>
 
