@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".ImageCapture">-->
 
+    <ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".ImageCapture"
+    >
+
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -22,9 +30,9 @@
         <LinearLayout
             android:id="@+id/buttonLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="12dp"
-            android:gravity="bottom"
+            android:layout_below="@id/mImageView"
             >
 
             <Button
@@ -49,13 +57,14 @@
         <ImageView
             android:id="@+id/mImageView"
             android:layout_width="wrap_content"
-            android:layout_height="500dp"
+            android:layout_height="610dp"
             android:layout_marginBottom="29dp"
-            android:layout_above="@id/buttonLayout"
             android:scaleType="fitCenter"
             android:src="@drawable/placeholderimg" />
 
 
 
     </RelativeLayout>
+
+</ScrollView>
 

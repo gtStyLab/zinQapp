@@ -113,6 +113,8 @@ public class chooseCircle4 extends AppCompatActivity {
                 ArrayList<Integer> reds = new ArrayList<Integer>();
                 ArrayList<Integer> blues = new ArrayList<Integer>();
                 ArrayList<Integer> greens = new ArrayList<Integer>();
+                ArrayList<Integer> xvalues = new ArrayList<Integer>();
+                ArrayList<Integer> yvalues = new ArrayList<Integer>();
 
                 ImageView image = findViewById(R.id.secondImageView);
                 BitmapDrawable bitmapDrawable = (BitmapDrawable) image.getDrawable();
@@ -318,6 +320,8 @@ public class chooseCircle4 extends AppCompatActivity {
                                                     reds.add(redValue);
                                                     greens.add(greenValue);
                                                     blues.add(blueValue);
+                                                    xvalues.add(xv);
+                                                    yvalues.add(yv);
                                                 }
 
                                             }
