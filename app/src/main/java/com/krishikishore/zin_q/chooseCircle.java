@@ -285,14 +285,20 @@ public class chooseCircle extends AppCompatActivity {
                                        double distanceSquared = dx * dx + dy * dy;
 
                                        if (distanceSquared <= (rcenter * rcenter)) {
-                                           if (xv >=0 && yv >= 0 ) {
+
+                                           if (xv >=0 && yv >= 0 && xv<newbitmap.getWidth() && yv<newbitmap.getHeight()) {
                                            int pixel = newbitmap.getPixel(xv, yv);
                                            int redValue = Color.red(pixel);
                                            int greenValue = Color.green(pixel);
                                            int blueValue = Color.blue(pixel);
-                                           reds.add(redValue);
-                                           greens.add(greenValue);
-                                           blues.add(blueValue);
+
+                                           double calculation = ( ( (redValue-greenValue)*(redValue-greenValue) ) + ( (redValue-blueValue)*(redValue-blueValue) ) + ( (greenValue-blueValue)*(greenValue-blueValue) ));
+                                               if ( ( (redValue-greenValue)*(redValue-greenValue) ) + ( (redValue-blueValue)*(redValue-blueValue) ) + ( (greenValue-blueValue)*(greenValue-blueValue) )  >5000 ) {
+                                               reds.add(redValue);
+                                               greens.add(greenValue);
+                                               blues.add(blueValue);
+                                           }
+
                                            }
 
                                        }
@@ -308,6 +314,25 @@ public class chooseCircle extends AppCompatActivity {
                                }
                                for (int n : blues) {
                                    bluesum += n;
+                               }
+
+                               if (reds.size() ==0 || greens.size() ==0 || blues.size() ==0 ) {
+                                   AlertDialog.Builder builder;
+                                   if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                                       builder = new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert);
+                                   } else {
+                                       builder = new AlertDialog.Builder(this);
+                                   }
+                                   builder.setTitle("Circle Detection Failed")
+                                           .setMessage("Try clicking closer to the center of the sample.")
+                                           .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                               public void onClick(DialogInterface dialog, int which) {
+                                                   dialog.cancel();
+                                               }
+                                           })
+                                           .setIcon(android.R.drawable.ic_dialog_alert).show();
+
+                                   return true;
                                }
 
                                redaverage = redsum / reds.size();
