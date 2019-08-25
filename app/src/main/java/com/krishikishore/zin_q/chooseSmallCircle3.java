@@ -68,11 +68,9 @@ public class chooseSmallCircle3 extends AppCompatActivity {
         String red1 = intentExtras.getStringExtra("Red1");
         String green1 = intentExtras.getStringExtra("Green1");
         String blue1 = intentExtras.getStringExtra("Blue1");
-        String colorScore1 = intentExtras.getStringExtra("colorScore1");
         String red2 = intentExtras.getStringExtra("Red2");
         String green2 = intentExtras.getStringExtra("Green2");
         String blue2 = intentExtras.getStringExtra("Blue2");
-        String colorScore2 = intentExtras.getStringExtra("colorScore1");
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_UP:
@@ -82,28 +80,17 @@ public class chooseSmallCircle3 extends AppCompatActivity {
                 System.out.println("x:" + x);
                 System.out.println("y:" + y);
 
-                double rint = 0;
-                double rslope = 0;
-                double gint = 0;
-                double gslope = 0;
-                double bint = 0;
-                double bslope = 0;
-                int numberOfCircles = 0;
-                int xcenter = 0;
-                int ycenter = 0;
-                int rcenter = 0;
+
                 int redaverage = 0;
                 int greenaverage = 0;
                 int blueaverage = 0;
                 int redsum = 0;
                 int greensum = 0;
                 int bluesum = 0;
-                double colorscore = 0;
                 ArrayList<Integer> reds = new ArrayList<Integer>();
                 ArrayList<Integer> blues = new ArrayList<Integer>();
                 ArrayList<Integer> greens = new ArrayList<Integer>();
-                ArrayList<Integer> xvalues = new ArrayList<Integer>();
-                ArrayList<Integer> yvalues = new ArrayList<Integer>();
+
 
                 ImageView image = findViewById(R.id.secondImageView);
                 BitmapDrawable bitmapDrawable = (BitmapDrawable) image.getDrawable();
@@ -179,11 +166,9 @@ public class chooseSmallCircle3 extends AppCompatActivity {
                 final Drawable d = bitmapDrawable;
                 final int origW = d.getIntrinsicWidth();
                 final int origH = d.getIntrinsicHeight();
-                boolean inside = false;
 
                 if (x > viewCoords[0] && x < viewCoords[0] + imageviewWidth && y > viewCoords[1] && y < viewCoords[1] + imageviewHeight && event.getAction() == MotionEvent.ACTION_UP) {
 
-                    inside = true;
                     Log.e(TAG, "onTouchEvent: drawable touched ");
 
 
@@ -192,31 +177,34 @@ public class chooseSmallCircle3 extends AppCompatActivity {
                     }
                     Bitmap bitmap = ((BitmapDrawable) image.getDrawable()).getBitmap();
 
-                    if ((updatedx - 5 + 10) > bitmap.getWidth()) {
-                        updatedx = bitmap.getWidth() - 10;
+                    int TargetWidth = 20;
+
+
+                    if ((updatedx - TargetWidth/2 + TargetWidth) > bitmap.getWidth()) {
+                        updatedx = bitmap.getWidth() - TargetWidth;
                     }
 
-                    if ((updatedy - 5 + 10) > bitmap.getHeight()) {
-                        updatedy = bitmap.getHeight() - 10;
+                    if ((updatedy - TargetWidth/2 + TargetWidth) > bitmap.getHeight()) {
+                        updatedy = bitmap.getHeight() - TargetWidth;
                     }
 
-                    if ((updatedx + 5) < 0) {
+                    if ((updatedx + TargetWidth/2) < 0) {
                         updatedx = 0;
                     }
 
-                    if ((updatedy + 5) < 0) {
+                    if ((updatedy + TargetWidth/2) < 0) {
                         updatedy = 0;
                     }
 
-                    if ((updatedx - 5) < 0) {
-                        updatedx = 5;
+                    if ((updatedx - TargetWidth/2) < 0) {
+                        updatedx = TargetWidth/2;
                     }
 
-                    if ((updatedy - 5) < 0) {
-                        updatedy = 5;
+                    if ((updatedy - TargetWidth/2) < 0) {
+                        updatedy = TargetWidth/2;
                     }
 
-                    Bitmap newbitmap = Bitmap.createBitmap(bitmap, updatedx - 5, updatedy - 5, 10, 10);
+                    Bitmap newbitmap = Bitmap.createBitmap(bitmap, updatedx - TargetWidth/2, updatedy - TargetWidth/2, TargetWidth, TargetWidth);
 
                     for (int l = 0; l < newbitmap.getWidth(); l++) {
                         for (int m = 0; m < newbitmap.getHeight(); m++) {
@@ -247,39 +235,17 @@ public class chooseSmallCircle3 extends AppCompatActivity {
                     bundle.putString("Red1", red1);
                     bundle.putString("Green1", green1);
                     bundle.putString("Blue1", blue1);
-                    bundle.putString("colorScore1", colorScore1);
                     bundle.putString("Red2", red2);
                     bundle.putString("Green2", green2);
                     bundle.putString("Blue2", blue2);
-                    bundle.putString("colorScore2", colorScore2);
                     bundle.putString("Red3", Integer.toString((int) redaverage));
                     bundle.putString("Green3", Integer.toString((int) greenaverage));
                     bundle.putString("Blue3", Integer.toString((int) blueaverage));
-                    bundle.putString("colorScore3", Integer.toString((int) colorscore3));
-
 
                     intentBundle.putExtras(bundle);
                     startActivity(intentBundle);
 
-                    if (!inside) {
-                        AlertDialog.Builder builder;
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                            builder = new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert);
-                        } else {
-                            builder = new AlertDialog.Builder(this);
-                        }
-                        builder.setTitle("Click Inside Image")
-                                .setMessage("You have clicked outside of the image. Please click inside of the image.")
-                                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        dialog.cancel();
-                                    }
-                                })
-                                .setIcon(android.R.drawable.ic_dialog_alert).show();
 
-                        return false;
-
-                    }
                     return false;
                 }
             case MotionEvent.ACTION_MOVE:

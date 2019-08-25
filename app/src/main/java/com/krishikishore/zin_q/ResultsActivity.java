@@ -33,50 +33,29 @@ public class ResultsActivity extends AppCompatActivity {
         String red1 = intentExtras.getStringExtra("Red1");
         String green1 = intentExtras.getStringExtra("Green1");
         String blue1 = intentExtras.getStringExtra("Blue1");
-        String colorScore1 = intentExtras.getStringExtra("ColorScore1");
-        String x1 = intentExtras.getStringExtra("XCoordinate1");
-        String y1 = intentExtras.getStringExtra("YCoordinate1");
-        String radius1 = intentExtras.getStringExtra("Radius1");
+
 
         String red2 = intentExtras.getStringExtra("Red2");
         String green2 = intentExtras.getStringExtra("Green2");
         String blue2 = intentExtras.getStringExtra("Blue2");
-        String colorScore2 = intentExtras.getStringExtra("ColorScore2");
-        String x2 = intentExtras.getStringExtra("XCoordinate2");
-        String y2 = intentExtras.getStringExtra("YCoordinate2");
-        String radius2 = intentExtras.getStringExtra("Radius2");
+
 
         String red3 = intentExtras.getStringExtra("Red3");
         String green3 = intentExtras.getStringExtra("Green3");
         String blue3 = intentExtras.getStringExtra("Blue3");
-        String colorScore3 = intentExtras.getStringExtra("ColorScore3");
-        String x3 = intentExtras.getStringExtra("XCoordinate3");
-        String y3 = intentExtras.getStringExtra("YCoordinate3");
-        String radius3 = intentExtras.getStringExtra("Radius3");
 
         String red4 = intentExtras.getStringExtra("Red4");
         String green4 = intentExtras.getStringExtra("Green4");
         String blue4 = intentExtras.getStringExtra("Blue4");
-        String colorScore4 = intentExtras.getStringExtra("ColorScore4");
-        String x4 = intentExtras.getStringExtra("XCoordinate4");
-        String y4 = intentExtras.getStringExtra("YCoordinate4");
-        String radius4 = intentExtras.getStringExtra("Radius4");
 
         String red5 = intentExtras.getStringExtra("Red5");
         String green5 = intentExtras.getStringExtra("Green5");
         String blue5 = intentExtras.getStringExtra("Blue5");
-        String colorScore5 = intentExtras.getStringExtra("ColorScore5");
-        String x5 = intentExtras.getStringExtra("XCoordinate5");
-        String y5 = intentExtras.getStringExtra("YCoordinate5");
-        String radius5 = intentExtras.getStringExtra("Radius5");
 
         String red6 = intentExtras.getStringExtra("Red6");
         String green6 = intentExtras.getStringExtra("Green6");
         String blue6 = intentExtras.getStringExtra("Blue6");
-        String colorScore6 = intentExtras.getStringExtra("ColorScore6");
-        String x6 = intentExtras.getStringExtra("XCoordinate6");
-        String y6 = intentExtras.getStringExtra("YCoordinate6");
-        String radius6 = intentExtras.getStringExtra("Radius6");
+
 
         //line fitting
         double xcoordinates[] = { Math.log10(0.5), Math.log10(1), Math.log10(2), Math.log10(5), Math.log10(10) };
@@ -170,9 +149,6 @@ public class ResultsActivity extends AppCompatActivity {
         } else {
             levelDisplay6.setText("Level: High");
         }
-
-
-
 
 
         View colorRectangle1 = (View)findViewById(R.id.color1);

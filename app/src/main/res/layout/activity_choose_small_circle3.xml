@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_width="fill_parent"
             android:layout_below="@+id/space1"
-            android:text="Please select inside of the pellet"
+            android:text="Select the center of the pellet"
             android:gravity="center"
             android:textSize="9pt"
             />
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_width="fill_parent"
             android:layout_below="@+id/space"
-            android:text="Allow up to 45 seconds before selecting again."
+            android:text="If the pellet is not fully visible, go back and reselect."
             android:gravity="center"
             android:textSize="7pt"
             />

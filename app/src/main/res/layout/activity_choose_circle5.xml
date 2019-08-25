@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_width="fill_parent"
             android:layout_below="@+id/space1"
-            android:text="Please select the 40 serum concentration"
+            android:text="Select Standard 5"
             android:gravity="center"
             android:textSize="9pt"
             />
