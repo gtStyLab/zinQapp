@@ -1,8 +1,10 @@
 package com.krishikishore.zin_q;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Point;
+import android.media.ExifInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
@@ -10,6 +12,7 @@ import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.*;
 import android.graphics.drawable.*;
 import android.graphics.Rect;
@@ -59,16 +62,83 @@ public class chooseCircle2 extends AppCompatActivity {
         }
     }
 
+    public String createImageFromBitmap(Bitmap bitmap) {
+        String fileName = "mySmallImage2";//no .png or .jpg needed
+        try {
+            ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+            FileOutputStream fo = openFileOutput(fileName, Context.MODE_PRIVATE);
+            fo.write(bytes.toByteArray());
+            // remember close file output
+            fo.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            fileName = null;
+        }
+        return fileName;
+    }
+
+    public static Bitmap rotateBitmap(Bitmap bitmap, int orientation) {
+
+        Matrix matrix = new Matrix();
+        switch (orientation) {
+            case ExifInterface.ORIENTATION_NORMAL:
+                return bitmap;
+            case ExifInterface.ORIENTATION_FLIP_HORIZONTAL:
+                matrix.setScale(-1, 1);
+                break;
+            case ExifInterface.ORIENTATION_ROTATE_180:
+                matrix.setRotate(180);
+                break;
+            case ExifInterface.ORIENTATION_FLIP_VERTICAL:
+                matrix.setRotate(180);
+                matrix.postScale(-1, 1);
+                break;
+            case ExifInterface.ORIENTATION_TRANSPOSE:
+                matrix.setRotate(90);
+                matrix.postScale(-1, 1);
+                break;
+            case ExifInterface.ORIENTATION_ROTATE_90:
+                matrix.setRotate(90);
+                break;
+            case ExifInterface.ORIENTATION_TRANSVERSE:
+                matrix.setRotate(-90);
+                matrix.postScale(-1, 1);
+                break;
+            case ExifInterface.ORIENTATION_ROTATE_270:
+                matrix.setRotate(-90);
+                break;
+            default:
+                return bitmap;
+        }
+        try {
+            Bitmap bmRotated = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+            bitmap.recycle();
+            return bmRotated;
+        }
+        catch (OutOfMemoryError e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public void processMoveToResults(View view) {
+        ImageView image = findViewById(R.id.mImageView);
+        Bitmap bitmap = ((BitmapDrawable) image.getDrawable()).getBitmap();
+
+        createImageFromBitmap(bitmap);
+        Intent goToNextActivity = new Intent(getApplicationContext(), chooseSmallCircle2.class);
+        startActivity(goToNextActivity);
+        finish();
+    }
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         Intent intentExtras = getIntent();
         String red1 = intentExtras.getStringExtra("Red1");
         String green1 = intentExtras.getStringExtra("Green1");
         String blue1 = intentExtras.getStringExtra("Blue1");
-        String colorScore1 = intentExtras.getStringExtra("ColorScore1");
-        String x1 = intentExtras.getStringExtra("XCoordinate1");
-        String y1 = intentExtras.getStringExtra("YCoordinate1");
-        String radius1 = intentExtras.getStringExtra("Radius1");
+        String colorScore1 = intentExtras.getStringExtra("colorScore1");
 
         switch(event.getAction()) {
             case MotionEvent.ACTION_UP:
@@ -214,6 +284,8 @@ public class chooseCircle2 extends AppCompatActivity {
                     }
 
                     Bitmap newbitmap = Bitmap.createBitmap(bitmap, updatedx - 100, updatedy - 100, 200, 200);
+
+                    createImageFromBitmap(newbitmap);
 
                     Mat mat = new Mat(newbitmap.getWidth(), newbitmap.getHeight(),
                             CvType.CV_8UC1);
@@ -374,23 +446,20 @@ public class chooseCircle2 extends AppCompatActivity {
                 colorscore = ((((redaverage - 61) / 42.9) + ((greenaverage - 48) / 26.6) - ((blueaverage - 79.6) / 7.3)) / 3);
 
 
-                Intent intentBundle = new Intent(chooseCircle2.this, chooseCircle3.class);
+                Intent intentBundle = new Intent(chooseCircle2.this, chooseSmallCircle2.class);
                 Bundle bundle = new Bundle();
-                bundle.putString("Red2", Integer.toString((int) redaverage));
-                bundle.putString("Green2", Integer.toString((int) greenaverage));
-                bundle.putString("Blue2", Integer.toString((int) blueaverage));
-                bundle.putString("ColorScore2", Double.toString(colorscore));
-                bundle.putString("XCoordinate2", Integer.toString((int) xcenter));
-                bundle.putString("YCoordinate2", Integer.toString((int) ycenter));
-                bundle.putString("Radius2", Integer.toString((int) rcenter));
+ //               bundle.putString("Red2", Integer.toString((int) redaverage));
+ //               bundle.putString("Green2", Integer.toString((int) greenaverage));
+ //               bundle.putString("Blue2", Integer.toString((int) blueaverage));
+ //               bundle.putString("ColorScore2", Double.toString(colorscore));
+//                bundle.putString("XCoordinate2", Integer.toString((int) xcenter));
+//                bundle.putString("YCoordinate2", Integer.toString((int) ycenter));
+//                bundle.putString("Radius2", Integer.toString((int) rcenter));
 
                 bundle.putString("Red1", red1);
                 bundle.putString("Green1", green1);
                 bundle.putString("Blue1", blue1);
-                bundle.putString("ColorScore1", colorScore1);
-                bundle.putString("XCoordinate1", x1);
-                bundle.putString("YCoordinate1", y1);
-                bundle.putString("Radius1", radius1);
+                bundle.putString("colorScore1", colorScore1);
 
                 intentBundle.putExtras(bundle);
                 startActivity(intentBundle);

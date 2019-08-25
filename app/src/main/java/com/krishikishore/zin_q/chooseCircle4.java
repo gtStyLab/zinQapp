@@ -1,6 +1,7 @@
 package com.krishikishore.zin_q;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.support.v7.app.AppCompatActivity;
@@ -59,32 +60,37 @@ public class chooseCircle4 extends AppCompatActivity {
         }
     }
 
+    public String createImageFromBitmap(Bitmap bitmap) {
+        String fileName = "mySmallImage2";//no .png or .jpg needed
+        try {
+            ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+            FileOutputStream fo = openFileOutput(fileName, Context.MODE_PRIVATE);
+            fo.write(bytes.toByteArray());
+            // remember close file output
+            fo.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            fileName = null;
+        }
+        return fileName;
+    }
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         Intent intentExtras = getIntent();
         String red1 = intentExtras.getStringExtra("Red1");
         String green1 = intentExtras.getStringExtra("Green1");
         String blue1 = intentExtras.getStringExtra("Blue1");
-        String colorScore1 = intentExtras.getStringExtra("ColorScore1");
-        String x1 = intentExtras.getStringExtra("XCoordinate1");
-        String y1 = intentExtras.getStringExtra("YCoordinate1");
-        String radius1 = intentExtras.getStringExtra("Radius1");
-
         String red2 = intentExtras.getStringExtra("Red2");
         String green2 = intentExtras.getStringExtra("Green2");
         String blue2 = intentExtras.getStringExtra("Blue2");
-        String colorScore2 = intentExtras.getStringExtra("ColorScore2");
-        String x2 = intentExtras.getStringExtra("XCoordinate2");
-        String y2 = intentExtras.getStringExtra("YCoordinate2");
-        String radius2 = intentExtras.getStringExtra("Radius2");
-
         String red3 = intentExtras.getStringExtra("Red3");
         String green3 = intentExtras.getStringExtra("Green3");
         String blue3 = intentExtras.getStringExtra("Blue3");
-        String colorScore3 = intentExtras.getStringExtra("ColorScore3");
-        String x3 = intentExtras.getStringExtra("XCoordinate3");
-        String y3 = intentExtras.getStringExtra("YCoordinate3");
-        String radius3 = intentExtras.getStringExtra("Radius3");
+
+
+
         switch(event.getAction()) {
             case MotionEvent.ACTION_UP:
                 int x = (int) event.getX();
@@ -229,6 +235,8 @@ public class chooseCircle4 extends AppCompatActivity {
                     }
 
                     Bitmap newbitmap = Bitmap.createBitmap(bitmap, updatedx - 100, updatedy - 100, 200, 200);
+
+                    createImageFromBitmap(newbitmap);
 
                     Mat mat = new Mat(newbitmap.getWidth(), newbitmap.getHeight(),
                             CvType.CV_8UC1);
@@ -378,74 +386,60 @@ public class chooseCircle4 extends AppCompatActivity {
                         param2 = 3;
                     }
 
-            if (numberOfCircles == 1) {
+                    if (numberOfCircles == 1) {
 
-                double xval[] = {0, 2, 4};
+                        double xval[] = {0, 2, 4};
 
-                redaverage = redsum / reds.size();
-                greenaverage = greensum / greens.size();
-                blueaverage = bluesum / blues.size();
+                        redaverage = redsum / reds.size();
+                        greenaverage = greensum / greens.size();
+                        blueaverage = bluesum / blues.size();
 
-                colorscore = ((((redaverage - 61) / 42.9) + ((greenaverage - 48) / 26.6) - ((blueaverage - 79.6) / 7.3)) / 3);
+                        colorscore = ((((redaverage - 61) / 42.9) + ((greenaverage - 48) / 26.6) - ((blueaverage - 79.6) / 7.3)) / 3);
 
 
-                Intent intentBundle = new Intent(chooseCircle4.this, chooseCircle5.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("Red4", Integer.toString((int) redaverage));
-                bundle.putString("Green4", Integer.toString((int) greenaverage));
-                bundle.putString("Blue4", Integer.toString((int) blueaverage));
-                bundle.putString("ColorScore4", Double.toString(colorscore));
-                bundle.putString("XCoordinate4", Integer.toString((int) xcenter));
-                bundle.putString("YCoordinate4", Integer.toString((int) ycenter));
-                bundle.putString("Radius4", Integer.toString((int) rcenter));
+                        Intent intentBundle = new Intent(chooseCircle4.this, chooseSmallCircle4.class);
+                        Bundle bundle = new Bundle();
+   //                     bundle.putString("Red4", Integer.toString((int) redaverage));
+   //                     bundle.putString("Green4", Integer.toString((int) greenaverage));
+   //                     bundle.putString("Blue4", Integer.toString((int) blueaverage));
+   //                     bundle.putString("ColorScore2", Double.toString(colorscore));
+//                        bundle.putString("XCoordinate2", Integer.toString((int) xcenter));
+//                        bundle.putString("YCoordinate2", Integer.toString((int) ycenter));
+//                        bundle.putString("Radius2", Integer.toString((int) rcenter));
 
-                bundle.putString("Red3", red3);
-                bundle.putString("Green3", green3);
-                bundle.putString("Blue3", blue3);
-                bundle.putString("ColorScore3", colorScore3);
-                bundle.putString("XCoordinate3", x3);
-                bundle.putString("YCoordinate3", y3);
-                bundle.putString("Radius3", radius3);
+                        bundle.putString("Red1", red1);
+                        bundle.putString("Green1", green1);
+                        bundle.putString("Blue1", blue1);
+                        bundle.putString("Red2", red2);
+                        bundle.putString("Green2", green2);
+                        bundle.putString("Blue2", blue2);
+                        bundle.putString("Red3", red3);
+                        bundle.putString("Green3", green3);
+                        bundle.putString("Blue3", blue3);
 
-                bundle.putString("Red2", red2);
-                bundle.putString("Green2", green2);
-                bundle.putString("Blue2", blue2);
-                bundle.putString("ColorScore2", colorScore2);
-                bundle.putString("XCoordinate2", x2);
-                bundle.putString("YCoordinate2", y2);
-                bundle.putString("Radius2", radius2);
+                        intentBundle.putExtras(bundle);
+                        startActivity(intentBundle);
 
-                bundle.putString("Red1", red1);
-                bundle.putString("Green1", green1);
-                bundle.putString("Blue1", blue1);
-                bundle.putString("ColorScore1", colorScore1);
-                bundle.putString("XCoordinate1", x1);
-                bundle.putString("YCoordinate1", y1);
-                bundle.putString("Radius1", radius1);
+                    } else {
 
-                intentBundle.putExtras(bundle);
-                startActivity(intentBundle);
+                        AlertDialog.Builder builder;
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                            builder = new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert);
+                        } else {
+                            builder = new AlertDialog.Builder(this);
+                        }
+                        builder.setTitle("Circle Detection Failed")
+                                .setMessage("Sample was not found. Please try clicking again or taking another picture.")
+                                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.cancel();
+                                    }
+                                })
+                                .setIcon(android.R.drawable.ic_dialog_alert).show();
 
-            } else {
+                        return true;
 
-                AlertDialog.Builder builder;
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    builder = new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert);
-                } else {
-                    builder = new AlertDialog.Builder(this);
-                }
-                builder.setTitle("Circle Detection Failed")
-                        .setMessage("Sample was not found. Please try clicking again or taking another picture.")
-                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.cancel();
-                            }
-                        })
-                        .setIcon(android.R.drawable.ic_dialog_alert).show();
-
-                return true;
-
-            }
+                    }
 
                     return true;
 

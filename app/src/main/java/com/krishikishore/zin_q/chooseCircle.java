@@ -1,10 +1,13 @@
 package com.krishikishore.zin_q;
 
+import android.content.Context;
 import android.graphics.Bitmap;
+import android.media.ExifInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.*;
 import android.graphics.drawable.*;
 import android.graphics.Rect;
@@ -58,6 +61,76 @@ public class chooseCircle extends AppCompatActivity {
             // getWidth() & getHeight() are deprecated
             return new ScreenResolution(display.getWidth(), display.getHeight());
         }
+    }
+
+    public String createImageFromBitmap(Bitmap bitmap) {
+        String fileName = "mySmallImage1";//no .png or .jpg needed
+        try {
+            ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+            FileOutputStream fo = openFileOutput(fileName, Context.MODE_PRIVATE);
+            fo.write(bytes.toByteArray());
+            // remember close file output
+            fo.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+            fileName = null;
+        }
+        return fileName;
+    }
+
+    public static Bitmap rotateBitmap(Bitmap bitmap, int orientation) {
+
+        Matrix matrix = new Matrix();
+        switch (orientation) {
+            case ExifInterface.ORIENTATION_NORMAL:
+                return bitmap;
+            case ExifInterface.ORIENTATION_FLIP_HORIZONTAL:
+                matrix.setScale(-1, 1);
+                break;
+            case ExifInterface.ORIENTATION_ROTATE_180:
+                matrix.setRotate(180);
+                break;
+            case ExifInterface.ORIENTATION_FLIP_VERTICAL:
+                matrix.setRotate(180);
+                matrix.postScale(-1, 1);
+                break;
+            case ExifInterface.ORIENTATION_TRANSPOSE:
+                matrix.setRotate(90);
+                matrix.postScale(-1, 1);
+                break;
+            case ExifInterface.ORIENTATION_ROTATE_90:
+                matrix.setRotate(90);
+                break;
+            case ExifInterface.ORIENTATION_TRANSVERSE:
+                matrix.setRotate(-90);
+                matrix.postScale(-1, 1);
+                break;
+            case ExifInterface.ORIENTATION_ROTATE_270:
+                matrix.setRotate(-90);
+                break;
+            default:
+                return bitmap;
+        }
+        try {
+            Bitmap bmRotated = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+            bitmap.recycle();
+            return bmRotated;
+        }
+        catch (OutOfMemoryError e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public void processMoveToResults(View view) {
+        ImageView image = findViewById(R.id.mImageView);
+        Bitmap bitmap = ((BitmapDrawable) image.getDrawable()).getBitmap();
+
+        createImageFromBitmap(bitmap);
+        Intent goToNextActivity = new Intent(getApplicationContext(), chooseSmallCircle.class);
+        startActivity(goToNextActivity);
+        finish();
     }
 
     @Override
@@ -205,6 +278,8 @@ public class chooseCircle extends AppCompatActivity {
                    }
 
                    Bitmap newbitmap = Bitmap.createBitmap(bitmap, updatedx - 100, updatedy - 100, 200, 200);
+
+                   createImageFromBitmap(newbitmap);
 
                    Mat mat = new Mat(newbitmap.getWidth(), newbitmap.getHeight(),
                            CvType.CV_8UC1);
@@ -367,17 +442,17 @@ public class chooseCircle extends AppCompatActivity {
 
                        colorscore = ((((redaverage - 61) / 42.9) + ((greenaverage - 48) / 26.6) - ((blueaverage - 79.6) / 7.3)) / 3);
 
-                       Intent intentBundle = new Intent(chooseCircle.this, chooseCircle2.class);
-                       Bundle bundle = new Bundle();
-                       bundle.putString("Red1", Integer.toString((int) redaverage));
-                       bundle.putString("Green1", Integer.toString((int) greenaverage));
-                       bundle.putString("Blue1", Integer.toString((int) blueaverage));
-                       bundle.putString("ColorScore1", Double.toString(colorscore));
-                       bundle.putString("XCoordinate1", Integer.toString((int) xcenter));
-                       bundle.putString("YCoordinate1", Integer.toString((int) ycenter));
-                       bundle.putString("Radius1", Integer.toString((int) rcenter));
+                      Intent intentBundle = new Intent(chooseCircle.this, chooseSmallCircle.class);
+//                       Bundle bundle = new Bundle();
+//                       bundle.putString("Red1", Integer.toString((int) redaverage));
+//                       bundle.putString("Green1", Integer.toString((int) greenaverage));
+//                       bundle.putString("Blue1", Integer.toString((int) blueaverage));
+//                       bundle.putString("ColorScore1", Double.toString(colorscore));
+ //                      bundle.putString("XCoordinate1", Integer.toString((int) xcenter));
+ //                      bundle.putString("YCoordinate1", Integer.toString((int) ycenter));
+  //                     bundle.putString("Radius1", Integer.toString((int) rcenter));
 
-                       intentBundle.putExtras(bundle);
+//                       intentBundle.putExtras(bundle);
                        startActivity(intentBundle);
 
                    } else {
